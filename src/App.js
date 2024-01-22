@@ -1,14 +1,12 @@
 import Banner from './componentes/Banner';
-import TextField from './componentes/TextField';
+import Form from './componentes/Form';
 
 function App() {
   return (
     <div className="App">
       {/* Componente React */}
-      <Banner />      
-      <TextField label="Nome" placeholder="Digite seu nome"/>
-      <TextField label="Cargo" placeholder="Digite seu cargo"/>
-      <TextField label="Imagem" placeholder="Digite seu imagem" />
+      <Banner />
+      <Form />
     </div>
   );
 }
