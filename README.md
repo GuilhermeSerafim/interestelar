@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+# Interestelar <img src="https://media2.giphy.com/media/26gskf95cHOTlQOL6/giphy.gif?cid=ecf05e47e0cszw6cmx7x5o86x278uidyi0zcnq6c3ng5lk26&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="Astronomo" width="30" height="30">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Bem-vindo ao Interestelar, a plataforma cósmica para a formação de equipes astronômicas!
 
-## Available Scripts
+## Visão Geral 🌌
 
-In the project directory, you can run:
+Interestelar é uma aplicação inovadora que permite aos usuários montarem equipes astronômicas e explorarem os mistérios do universo. Cada membro da equipe representa uma entidade celestial, e juntos, eles embarcam em missões interestelares emocionantes.
 
-### `npm start`
+## Funcionalidades Principais 🛰️
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Cosmic Team Builder:** Monte sua equipe escolhendo astros, estrelas e constelações para formar grupos únicos.
+- **Galactic Objectives:** Defina e participe de missões cósmicas para explorar novas fronteiras estelares.
+- **Stellar Profiles:** Cada astro possui um perfil detalhado com nome, cargo cósmico e imagem.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Como Começar 🌠
 
-### `npm test`
+1. Clone este repositório: `git clone https://github.com/seu-username/interestelar.git`
+2. Instale as dependências: `npm install`
+3. Inicie o aplicativo: `npm start`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Contribuição 👩‍🚀
 
-### `npm run build`
+Estamos abertos a contribuições! Se você quiser melhorar o Interestelar, sinta-se à vontade para enviar pull requests.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Contato 🌟
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Para perguntas ou feedback, entre em contato conosco em [contato@interestelar.com](mailto:guilerstudies@gmail.com).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Vamos explorar juntos o vasto cosmos! 🌌✨
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![](https://demo.wp-modula.com/wp-content/uploads/2020/09/giphy.gif)
