@@ -6,7 +6,9 @@ function App() {
     <div className="App">
       {/* Componente React */}
       <Banner />      
-      <TextField />
+      <TextField label="Nome" placeholder="Digite seu nome"/>
+      <TextField label="Cargo" placeholder="Digite seu cargo"/>
+      <TextField label="Imagem" placeholder="Digite seu imagem" />
     </div>
   );
 }
