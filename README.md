@@ -12,6 +12,15 @@ Interestelar é uma aplicação inovadora que permite aos usuários montarem equ
 - **Galactic Objectives:** Defina e participe de missões cósmicas para explorar novas fronteiras estelares.
 - **Stellar Profiles:** Cada astro possui um perfil detalhado com nome, cargo cósmico e imagem.
 
+## Designer 🎨
+
+Para criar a experiência visual única do Interestelar, utilizamos:
+
+- **Material-UI:** Uma biblioteca de componentes React. Proporciona uma interface de usuário elegante e consistente. 🚀
+
+- **Figma:** Utilizamos o Figma como nossa plataforma de design principal, baseando-nos no projeto [Organo](https://www.figma.com/file/T6BLI1HfB81eYOiVgpqQz7/Projeto-Intro-ao-React?type=design&node-id=134-143&mode=design&t=FkKzIepahJ1fTcyu-0) da Alura. 🌌✨
+
+
 ## Como Começar 🌠
 
 1. Clone este repositório: `git clone https://github.com/seu-username/interestelar.git`
