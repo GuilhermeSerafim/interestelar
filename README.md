@@ -4,7 +4,7 @@ Bem-vindo ao Interestelar, a plataforma cósmica para a formação de equipes as
 
 ## Visão Geral 🌌
 
-Interestelar é uma aplicação inovadora que permite aos usuários montarem equipes astronômicas e explorarem os mistérios do universo. Cada membro da equipe representa uma entidade celestial, e juntos, eles embarcam em missões interestelares emocionantes.
+Interestelar é uma aplicação que permite aos usuários montarem equipes astronômicas e explorarem os mistérios do universo. Use sua criativade!
 
 ## Funcionalidades Principais 🛰️
 
