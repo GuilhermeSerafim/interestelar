@@ -4,9 +4,10 @@ import "./Form.css";
 
 const Form = () => {
 
+    // Nossos times de
     const teams = [
         'Astro Studies', // Estudos
-        'Stellar Explorers', // Exploradores
+        'Stellar Explorers', // Exploração
         'Interspatial Support', // Suporte
         'Galaxy Infrastructure' // Infraestrutura 
     ]
