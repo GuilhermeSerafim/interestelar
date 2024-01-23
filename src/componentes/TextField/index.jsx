@@ -1,12 +1,18 @@
 import './TextField.css';
-
+import MUITextField from '@mui/material/TextField';
 const TextField = (props) => {
     return (
         <div className="campo-texto">
-            {/* Imprimindo prop direto no html */}
-            <label>{props.label}</label>
-            {/* Imprimindo prop como propriedade */}
-            <input placeholder={props.placeholder}/>
+            <MUITextField
+                fullWidth
+                id="outlined-basic"
+                error={props.error}
+                required={props.required}
+                label={props.label}
+                variant="outlined"
+                color='secondary'
+                margin='dense'
+            />
         </div>
     )
 };

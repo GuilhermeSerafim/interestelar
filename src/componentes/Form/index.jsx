@@ -1,14 +1,15 @@
 import TextField from "../TextField";
 import "./Form.css";
 
-const Form = (props) => {
+const Form = () => {
     return (
-        <section className="form">
+        <section className="formCriarAstros">
             <form>
                 <h1>Preencha os dados e crie os seus Astros!</h1>
-                <TextField label="Nome" placeholder="Digite seu nome" />
-                <TextField label="Planeta" placeholder="Digite seu planeta" />
-                <TextField label="Habilidades" placeholder="Digite suas habilidades" />
+                <TextField label="Nome" required />
+                <TextField label="Planeta" required />
+                <TextField label="Habilidades" />
+                <TextField label="Endereço imagem" />
                 {/* Aqui terá checkbox mui de estudo e equipe de astros */}
             </form>
         </section>
