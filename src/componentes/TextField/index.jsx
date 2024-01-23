@@ -12,6 +12,9 @@ const TextField = (props) => {
                 variant="outlined"
                 color='secondary'
                 margin='dense'
+                style={{backgroundColor:"#fff"}}
+                multiline={props.multiline}
+                rows={props.lines}
             />
         </div>
     )
