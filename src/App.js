@@ -1,5 +1,6 @@
 import Banner from './componentes/Banner';
 import Form from './componentes/Form';
+import "./styles.css"
 
 function App() {
   return (
