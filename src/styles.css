@@ -1,5 +1,14 @@
 :root {
-    --primary-color : #71009a;
-    --secundary-color: #c167d7;
+    --primary-color: #71009a;
     --background-color: #f2f2f2;
+    /* Cores principais dos times */
+    --astro-studies: #0a3871;
+    --stellar-explorers: #ffba05;
+    --interspatial-support: #b13091;
+    --galaxy-infrastructure: #57c278;
+    /* Cores secundárias dos times */
+    --astro-studies-secondary: #4280cc;
+    --stellar-explorers-secondary: #fff5d9;
+    --interspatial-support-secondary: #b462a0;
+    --galaxy-infrastructure-secondary: #d9f7e9;
 }
