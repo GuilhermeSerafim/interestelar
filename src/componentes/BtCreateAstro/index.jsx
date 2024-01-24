@@ -6,7 +6,13 @@ const BtCreateAstro = (props) => {
 
     return (
         <FormControl margin="normal">
-            <Button type="submit" color='secondary' size='large' variant="contained">{children}</Button>
+            <Button
+                type="submit"
+                color='secondary'
+                size='large'
+                variant="contained">
+                {children}
+            </Button>
         </FormControl>
     )
 }
