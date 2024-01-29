@@ -2,10 +2,9 @@ import SelectTeam from "../SelectTeam";
 import TextField from "../TextField";
 import "./Form.css";
 import BtCreateAstro from "../BtCreateAstro";
+import { useState } from "react";
 
-const FormAstro = (props) => {
-    // Desestruturação do objeto
-    const { defaultValueSelect } = props;
+const FormAstro = () => {
 
     // Nossos times de
     const teams = [
@@ -15,19 +14,25 @@ const FormAstro = (props) => {
         'Galaxy Infrastructure' // Infraestrutura 
     ]
 
+    const [nome, setNome] = useState("");
+    const [planeta, setPlaneta] = useState("");
+    const [imagem, setImagem] = useState("");
+    const [habilidade, setHabilidades] = useState("");
+
     const aoSalvar = (e) => {
         e.preventDefault();
-        console.log("a")
+        console.log("Testando", nome, planeta, imagem, habilidade)
     }
+    
     return (
         <section className="formCriarAstros">
             <form onSubmit={aoSalvar}>
                 <h1>Preencha os dados e crie os seus Astros!</h1>
-                <TextField label="Nome" required />
-                <TextField label="Planeta" required />
-                <TextField label="Endereço da sua imagem" required />
-                <TextField label="Habilidades" multiline lines="4" />
-                <SelectTeam itens={teams} defaultValue={defaultValueSelect} />
+                <TextField value={nome} aoAlterado={valor => setNome(valor)} label="Nome" required />
+                <TextField value={planeta} aoAlterado={valor => setPlaneta(valor)} label="Planeta" required />
+                <TextField value={imagem} aoAlterado={valor => setImagem(valor)} label="Endereço da sua imagem" required />
+                <TextField value={habilidade} aoAlterado={valor => setHabilidades(valor)} label="Habilidades" multiline lines="4" />
+                <SelectTeam teams={teams}/>
                 <BtCreateAstro>Criar Astro</BtCreateAstro>
             </form>
         </section>

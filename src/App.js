@@ -5,8 +5,7 @@ import "./styles.css"
 import { useState } from 'react';
 
 function App() {
-  // let escolhaDoTime = "";
-  const [escolhaDoTime, setEscolhaDoTime] = useState("");
+
   return (
     <div className="App">
       {/* Componente React */}
@@ -21,32 +20,32 @@ function App() {
         color='secondary'
         size='large'
         variant="outlined"
-        onClick={() => setEscolhaDoTime("Astro Studies")} >
+        onClick={() => console.log("Astro Studies")} >
         Desvende os segredos dos Cosmos
       </Button>
       <Button
         color='secondary'
         size='large'
         variant="outlined"
-        onClick={() => setEscolhaDoTime("Stellar Explorers")} >
+        onClick={() => console.log("Stellar Explorers")} >
         Seja um explorador estelar
       </Button>
       <Button
         color='secondary'
         size='large'
         variant="outlined"
-        onClick={() => setEscolhaDoTime("Galaxy Infrastructure")} >
+        onClick={() => console.log("Galaxy Infrastructure")} >
         Molde galáxias e construa dysons
       </Button>
       <Button
         color='secondary'
         size='large'
         variant="outlined"
-        onClick={() => setEscolhaDoTime("Interspatial Support")} >
+        onClick={() => console.log("Interspatial Support")} >
         Seja um semeador dos cosmos
       </Button>
       {/* Crie seus Astros */}
-      <FormAstro defaultValueSelect={escolhaDoTime} />
+      <FormAstro />
     </div>
   );
 }

@@ -4,21 +4,15 @@ import MUITextField from '@mui/material/TextField';
     const TextField = (props) => {
 
     // Desestruturação do objeto
-    const {error, required, label, multiline, lines} = props;
-    // valor - valor atual
-    // setValor - função cheia de mecanismo, no qual o react entende que deve renderizar o componente
-    const [valor, setValor] = useState("Valor inicial");
+    const {error, required, label, multiline, lines, value} = props;
+    
 
-    const aoDigitado = (e) => {
-        console.log(valor);
-        setValor(e.target.value);
-    }
-
+    // Subi o hook para o formAstro
     return (
         <div className="campo-texto">
             <MUITextField
-                onChange={aoDigitado}
-                value={valor}
+                onChange={"a"}
+                value={value}
                 fullWidth
                 id="outlined-basic"
                 error={error}

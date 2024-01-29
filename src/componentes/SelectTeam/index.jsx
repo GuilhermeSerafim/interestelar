@@ -1,26 +1,28 @@
 import { Select, MenuItem, InputLabel, FormControl } from "@mui/material";
 import "./SelectTeam.css";
+import { useState } from "react";
 
 const SelectTeam = (props) => {
     // Desestruturação do objeto
-    const { itens, value, onChange, defaultValue } = props;
-    const escolhaDoTime = !defaultValue ? "Escolha seu time" : defaultValue;
+    const { teams } = props;
+
+    const [estadoAtual, setEstadoAtual] = useState("");
     return (
         <FormControl color="secondary" fullWidth margin="dense" variant="filled" >
-            <InputLabel id="teams-label">{escolhaDoTime}</InputLabel>
+            <InputLabel id="rotulo-times">{"Rótulo para o controle de seleção"}</InputLabel>
             <Select
-                labelId="teams-label"
-                id="teams"
-                value={value}  // Aqui você deve fornecer o valor selecionado (pode ser um estado do componente pai)
-                label="Teams"
-                onChange={onChange}  // Aqui você deve fornecer a função de callback para lidar com as mudanças de seleção
+                labelId="rotulo-times"
+                id="select-times"
+                value={estadoAtual}
+                label="Seletor de times"
+                onChange={(valor) => setEstadoAtual(valor.target.value)}
             >
-                {/* Renderizando lista com map (retorna nv arr) */}
-                {itens.map(item => (
+                {/* Renderizando times no seletor com map (retorna nv arr) */}
+                {teams.map(time => (
                     // Tiramos o index, pois o React pode não renderizar e causar alguns bugs, por isso colocam os o proprio item
                     // Obs: mas geralmente colocamos o index, quando recebemos esse index do servidor back-end
-                    <MenuItem key={item} value={item}>
-                        {item}
+                    <MenuItem key={time} value={time}>
+                        {time}
                     </MenuItem>
                 ))}
             </Select>
