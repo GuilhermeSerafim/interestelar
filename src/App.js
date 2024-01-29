@@ -7,6 +7,30 @@ import Team from './componentes/Team';
 
 function App() {
 
+  const exibicaoDosTimes = [
+    {
+      nome: 'Astro Studies',
+      corPrimaria: '#0a3871',
+      corSecundaria: '#abc7e9'
+    },
+    {
+      nome: 'Stellar Explorers',
+      corPrimaria: '#ffba05',
+      corSecundaria: '#fff5d9'
+    },
+    {
+      nome: 'Interspatial Support',
+      corPrimaria: '#b13091',
+      corSecundaria: '#b462a0'
+    },
+    {
+      nome: 'Galaxy Infrastructure',
+      corPrimaria: '#57c278',
+      corSecundaria: '#d9f7e9'
+    },
+  ]
+
+
   // Subimos esse estado, por que teremos a opção de escolher time (quando estivermos na sessão dos times)
   const [time, setTime] = useState("");
 
@@ -62,6 +86,7 @@ function App() {
         aoNovoAstroAdicionado={astro => adicionarAstro(astro)}
       />
       <Team nome="Nome estático"/>
+      <Team nome="Nome estático 2"/>
     </div>
   );
 }
