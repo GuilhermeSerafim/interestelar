@@ -2,8 +2,19 @@ import { Button } from '@mui/material';
 import Banner from './componentes/Banner';
 import FormAstro from './componentes/FormAstro';
 import "./styles.css"
+import { useState } from 'react';
 
 function App() {
+
+  // Subimos esse estado, por que teremos a opção de escolher time (quando estivermos na sessão dos times)
+  const [time, setTime] = useState("");
+
+  const [astros, setAstros] = useState([]);
+
+  const adicionarAstro = (astro) => {
+    console.log([...astros, astro]);
+    setAstros([...astros, astro])
+  }
 
   return (
     <div className="App">
@@ -19,32 +30,36 @@ function App() {
         color='secondary'
         size='large'
         variant="outlined"
-        onClick={() => console.log("Astro Studies")} >
+        onClick={() => setTime("Astro Studies")} >
         Desvende os segredos dos Cosmos
       </Button>
       <Button
         color='secondary'
         size='large'
         variant="outlined"
-        onClick={() => console.log("Stellar Explorers")} >
+        onClick={() => setTime("Stellar Explorers")} >
         Seja um explorador estelar
       </Button>
       <Button
         color='secondary'
         size='large'
         variant="outlined"
-        onClick={() => console.log("Galaxy Infrastructure")} >
+        onClick={() => setTime("Galaxy Infrastructure")} >
         Molde galáxias e construa dysons
       </Button>
       <Button
         color='secondary'
         size='large'
         variant="outlined"
-        onClick={() => console.log("Interspatial Support")} >
+        onClick={() => setTime("Interspatial Support")} >
         Seja um semeador dos cosmos
       </Button>
       {/* Crie seus Astros */}
-      <FormAstro />
+      <FormAstro
+        time={time}
+        aoAlterado={e => setTime(e.target.value)}
+        aoNovoAstroAdicionado={astro => adicionarAstro(astro)}
+      />
     </div>
   );
 }

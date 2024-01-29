@@ -4,7 +4,9 @@ import "./Form.css";
 import BtCreateAstro from "../BtCreateAstro";
 import { useState } from "react";
 
-const FormAstro = () => {
+const FormAstro = (props) => {
+    // Destructuring
+    const {time, aoAlterado, aoNovoAstroAdicionado} = props;
 
     // Nossos times de
     const teams = [
@@ -17,12 +19,18 @@ const FormAstro = () => {
     const [nome, setNome] = useState("");
     const [planeta, setPlaneta] = useState("");
     const [imagem, setImagem] = useState("");
-    const [habilidade, setHabilidades] = useState("");
-    const [time, setTime] = useState("");
+    const [habilidades, setHabilidades] = useState("");
 
     const aoSalvar = (e) => {
         e.preventDefault();
-        console.log("Form submetido", nome, planeta, imagem, habilidade)
+        console.log("Form submetido", time, nome, planeta, imagem, habilidades)
+        aoNovoAstroAdicionado({
+            nome,
+            planeta,
+            imagem,
+            habilidades,
+            time
+        })
     }
 
     return (
@@ -48,15 +56,15 @@ const FormAstro = () => {
                     required
                 />
                 <TextField
-                    value={habilidade}
+                    value={habilidades}
                     aoAlterado={e => setHabilidades(e)}
                     label="Habilidades"
                     multiline
                     lines="4"
                 />
                 <SelectTeam
-                    value={time}
-                    aoAlterado={e => setTime(e.target.value)}
+                    time={time}
+                    aoAlterado={aoAlterado}
                     teams={teams}
                 />
                 <BtCreateAstro>Criar Astro</BtCreateAstro>
