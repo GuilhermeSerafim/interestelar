@@ -7,9 +7,12 @@ const SelectTeam = (props) => {
     const { teams } = props;
 
     const [estadoAtual, setEstadoAtual] = useState("");
+
+    let rotuloTime = estadoAtual === "" ? "Escolha seu time" : "Você escolheu";
+    
     return (
         <FormControl color="secondary" fullWidth margin="dense" variant="filled" >
-            <InputLabel id="rotulo-times">{"Rótulo para o controle de seleção"}</InputLabel>
+            <InputLabel id="rotulo-times">{rotuloTime}</InputLabel>
             <Select
                 labelId="rotulo-times"
                 id="select-times"

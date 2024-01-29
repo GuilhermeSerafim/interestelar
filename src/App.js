@@ -2,7 +2,6 @@ import { Button } from '@mui/material';
 import Banner from './componentes/Banner';
 import FormAstro from './componentes/FormAstro';
 import "./styles.css"
-import { useState } from 'react';
 
 function App() {
 
