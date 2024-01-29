@@ -3,6 +3,7 @@ import Banner from './componentes/Banner';
 import FormAstro from './componentes/FormAstro';
 import "./styles.css"
 import { useState } from 'react';
+import Team from './componentes/Team';
 
 function App() {
 
@@ -60,6 +61,7 @@ function App() {
         aoAlterado={e => setTime(e.target.value)}
         aoNovoAstroAdicionado={astro => adicionarAstro(astro)}
       />
+      <Team nome="Nome estático"/>
     </div>
   );
 }
