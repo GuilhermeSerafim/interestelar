@@ -18,21 +18,47 @@ const FormAstro = () => {
     const [planeta, setPlaneta] = useState("");
     const [imagem, setImagem] = useState("");
     const [habilidade, setHabilidades] = useState("");
+    const [time, setTime] = useState("");
 
     const aoSalvar = (e) => {
         e.preventDefault();
-        console.log("Testando", nome, planeta, imagem, habilidade)
+        console.log("Form submetido", nome, planeta, imagem, habilidade)
     }
-    
+
     return (
         <section className="formCriarAstros">
             <form onSubmit={aoSalvar}>
                 <h1>Preencha os dados e crie os seus Astros!</h1>
-                <TextField value={nome} aoAlterado={valor => setNome(valor)} label="Nome" required />
-                <TextField value={planeta} aoAlterado={valor => setPlaneta(valor)} label="Planeta" required />
-                <TextField value={imagem} aoAlterado={valor => setImagem(valor)} label="Endereço da sua imagem" required />
-                <TextField value={habilidade} aoAlterado={valor => setHabilidades(valor)} label="Habilidades" multiline lines="4" />
-                <SelectTeam teams={teams}/>
+                <TextField
+                    value={nome}
+                    aoAlterado={e => setNome(e)}
+                    label="Nome"
+                    required
+                />
+                <TextField
+                    value={planeta}
+                    aoAlterado={e => setPlaneta(e)}
+                    label="Planeta"
+                    required
+                />
+                <TextField
+                    value={imagem}
+                    aoAlterado={e => setImagem(e)}
+                    label="Endereço da sua imagem"
+                    required
+                />
+                <TextField
+                    value={habilidade}
+                    aoAlterado={e => setHabilidades(e)}
+                    label="Habilidades"
+                    multiline
+                    lines="4"
+                />
+                <SelectTeam
+                    value={time}
+                    aoAlterado={e => setTime(e.target.value)}
+                    teams={teams}
+                />
                 <BtCreateAstro>Criar Astro</BtCreateAstro>
             </form>
         </section>

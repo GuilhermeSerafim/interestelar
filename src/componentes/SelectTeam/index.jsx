@@ -1,14 +1,10 @@
 import { Select, MenuItem, InputLabel, FormControl } from "@mui/material";
 import "./SelectTeam.css";
-import { useState } from "react";
 
 const SelectTeam = (props) => {
     // Desestruturação do objeto
-    const { teams } = props;
-
-    const [estadoAtual, setEstadoAtual] = useState("");
-
-    let rotuloTime = estadoAtual === "" ? "Escolha seu time" : "Você escolheu";
+    const { teams, aoAlterado, value } = props;
+    let rotuloTime = value === "" ? "Escolha seu time" : "Você escolheu";
     
     return (
         <FormControl color="secondary" fullWidth margin="dense" variant="filled" >
@@ -16,9 +12,9 @@ const SelectTeam = (props) => {
             <Select
                 labelId="rotulo-times"
                 id="select-times"
-                value={estadoAtual}
+                value={value}
                 label="Seletor de times"
-                onChange={(valor) => setEstadoAtual(valor.target.value)}
+                onChange={aoAlterado}
             >
                 {/* Renderizando times no seletor com map (retorna nv arr) */}
                 {teams.map(time => (
