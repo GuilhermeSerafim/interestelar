@@ -61,7 +61,7 @@ function App() {
           backgroundColor={team.backgroundColor}
           key={team.name}
           name={team.name}
-          astros={astros}
+          astros={astros.filter(astro => astro.team === team.name)}
         />)}
     </div>
   );
