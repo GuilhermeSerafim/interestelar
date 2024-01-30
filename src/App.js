@@ -10,23 +10,23 @@ function App() {
   const exibicaoDosTimes = [
     {
       name: 'Astro Studies',
-      corPrimaria: '#0a3871',
-      corSecundaria: '#abc7e9'
+      primaryColor: '#0a3871',
+      backgroundColor: '#abc7e9'
     },
     {
       name: 'Stellar Explorers',
-      corPrimaria: '#ffba05',
-      corSecundaria: '#fff5d9'
+      primaryColor: '#ffba05',
+      backgroundColor: '#fff5d9'
     },
     {
       name: 'Interspatial Support',
-      corPrimaria: '#b13091',
-      corSecundaria: '#b462a0'
+      primaryColor: '#b13091',
+      backgroundColor: '#c082b1'
     },
     {
       name: 'Galaxy Infrastructure',
-      corPrimaria: '#57c278',
-      corSecundaria: '#d9f7e9'
+      primaryColor: '#57c278',
+      backgroundColor: '#d9f7e9'
     },
   ]
 
@@ -85,7 +85,8 @@ function App() {
         aoAlterado={e => setTime(e.target.value)}
         aoNovoAstroAdicionado={astro => adicionarAstro(astro)}
       />
-      {exibicaoDosTimes.map(time => <Team name={time.name}/>)}
+      {/* Tem que ter key em uma lista, o REACT usa essa key */}
+      {exibicaoDosTimes.map(team => <Team primaryColor={team.primaryColor} backgroundColor={team.backgroundColor} key={team.name} name={team.name} />)} 
     </div>
   );
 }
