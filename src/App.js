@@ -55,7 +55,14 @@ function App() {
         aoNovoAstroAdicionado={astro => adicionarAstro(astro)}
       />
       {/* Tem que ter key em uma lista, o REACT usa essa key */}
-      {exibicaoDosTimes.map(team => <Team primaryColor={team.primaryColor} backgroundColor={team.backgroundColor} key={team.name} name={team.name} />)}
+      {exibicaoDosTimes.map(team =>
+        <Team
+          primaryColor={team.primaryColor}
+          backgroundColor={team.backgroundColor}
+          key={team.name}
+          name={team.name}
+          astros={astros}
+        />)}
     </div>
   );
 }

@@ -1,22 +1,21 @@
 import { Avatar, Card, CardContent } from '@mui/material';
-import './Astro.css';
+import './AstroCard.css';
 
 const Astro = (props) => {
 
     // Destructuring
-    const { imagem } = props;
+    const { imagem, nome, planeta } = props;
     return (
         <div className='astro'>
             <div className='cabecalho'>
                 <img
-                    src='https://github.com/guilhermeserafim.png'
+                    src={imagem}
                     alt='imagem do astro'
-                    // sx={{width: 100, height: 100}}
                 />
             </div>
             <div className='rodape'>
-                <h4>Guilherme Serafim</h4>
-                <h5>Jovem Aprendiz</h5>
+                <h4>{nome}</h4>
+                <h5>{planeta}</h5>
             </div>
         </div>
     )
