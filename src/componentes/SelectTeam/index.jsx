@@ -3,8 +3,8 @@ import "./SelectTeam.css";
 
 const SelectTeam = (props) => {
     // Desestruturação do objeto
-    const { teams, aoAlterado, time } = props;
-    let rotuloTime = time === "" ? "Escolha seu time" : "Você escolheu";
+    const { teams, aoAlterado, selectTeam } = props;
+    let rotuloTime = selectTeam === "" ? "Escolha seu time" : "Você escolheu";
     
     return (
         <FormControl color="secondary" fullWidth margin="dense" variant="filled" >
@@ -12,7 +12,7 @@ const SelectTeam = (props) => {
             <Select
                 labelId="rotulo-times"
                 id="select-times"
-                value={time}
+                value={selectTeam}
                 label="Seletor de times"
                 onChange={aoAlterado}
             >

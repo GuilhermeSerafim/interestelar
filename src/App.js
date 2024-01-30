@@ -21,7 +21,7 @@ function App() {
     {
       name: 'Interspatial Support',
       primaryColor: '#b13091',
-      backgroundColor: '#c082b1'
+      backgroundColor: '#b462a0'
     },
     {
       name: 'Galaxy Infrastructure',
@@ -32,7 +32,7 @@ function App() {
 
 
   // Subimos esse estado, por que teremos a opção de escolher time pelos botões (quando estivermos na sessão dos times)
-  const [time, setTime] = useState("");
+  const [selectTeam, setSelectTeam] = useState("");
 
   const [astros, setAstros] = useState([]);
 
@@ -55,34 +55,35 @@ function App() {
         color='secondary'
         size='large'
         variant="outlined"
-        onClick={() => setTime("Astro Studies")} >
+        onClick={() => setSelectTeam("Astro Studies")} >
         Desvende os segredos dos Cosmos
       </Button>
       <Button
         color='secondary'
         size='large'
         variant="outlined"
-        onClick={() => setTime("Stellar Explorers")} >
+        onClick={() => setSelectTeam("Stellar Explorers")} >
         Seja um explorador estelar
       </Button>
       <Button
         color='secondary'
         size='large'
         variant="outlined"
-        onClick={() => setTime("Galaxy Infrastructure")} >
+        onClick={() => setSelectTeam("Galaxy Infrastructure")} >
         Molde galáxias e construa dysons
       </Button>
       <Button
         color='secondary'
         size='large'
         variant="outlined"
-        onClick={() => setTime("Interspatial Support")} >
+        onClick={() => setSelectTeam("Interspatial Support")} >
         Seja um semeador dos cosmos
       </Button>
       {/* Crie seus Astros */}
       <FormAstro
-        time={time}
-        aoAlterado={e => setTime(e.target.value)}
+        teams={exibicaoDosTimes.map(team => team.name)}
+        selectTeam={selectTeam}
+        aoAlterado={e => setSelectTeam(e.target.value)}
         aoNovoAstroAdicionado={astro => adicionarAstro(astro)}
       />
       {/* Tem que ter key em uma lista, o REACT usa essa key */}

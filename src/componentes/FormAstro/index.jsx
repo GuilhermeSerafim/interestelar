@@ -6,15 +6,7 @@ import { useState } from "react";
 
 const FormAstro = (props) => {
     // Destructuring
-    const {time, aoAlterado, aoNovoAstroAdicionado} = props;
-
-    // Nossos times de
-    const teams = [
-        'Astro Studies', // Estudos
-        'Stellar Explorers', // Exploração
-        'Interspatial Support', // Suporte
-        'Galaxy Infrastructure' // Infraestrutura 
-    ]
+    const {selectTeam, aoAlterado, aoNovoAstroAdicionado, teams} = props;
 
     const [nome, setNome] = useState("");
     const [planeta, setPlaneta] = useState("");
@@ -23,13 +15,13 @@ const FormAstro = (props) => {
 
     const aoSalvar = (e) => {
         e.preventDefault();
-        console.log("Form submetido", time, nome, planeta, imagem, habilidades)
+        console.log("Form submetido", selectTeam, nome, planeta, imagem, habilidades)
         aoNovoAstroAdicionado({
             nome,
             planeta,
             imagem,
             habilidades,
-            time
+            selectTeam
         })
     }
 
@@ -63,7 +55,7 @@ const FormAstro = (props) => {
                     lines="4"
                 />
                 <SelectTeam
-                    time={time}
+                    selectTeam={selectTeam}
                     aoAlterado={aoAlterado}
                     teams={teams}
                 />
