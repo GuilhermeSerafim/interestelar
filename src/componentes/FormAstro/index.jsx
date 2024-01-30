@@ -6,7 +6,7 @@ import { useState } from "react";
 
 const FormAstro = (props) => {
     // Destructuring
-    const {selectTeam, aoAlterado, aoNovoAstroAdicionado, teams} = props;
+    const {selectTeam, aoAlterado, aoNovoAstroAdicionado, teamsNames} = props;
 
     const [nome, setNome] = useState("");
     const [planeta, setPlaneta] = useState("");
@@ -57,7 +57,7 @@ const FormAstro = (props) => {
                 <SelectTeam
                     selectTeam={selectTeam}
                     aoAlterado={aoAlterado}
-                    teams={teams}
+                    teamsNames={teamsNames}
                 />
                 <BtCreateAstro>Criar Astro</BtCreateAstro>
             </form>

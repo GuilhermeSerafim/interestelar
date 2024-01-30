@@ -3,7 +3,7 @@ import "./SelectTeam.css";
 
 const SelectTeam = (props) => {
     // Desestruturação do objeto
-    const { teams, aoAlterado, selectTeam } = props;
+    const { teamsNames, aoAlterado, selectTeam } = props;
     let rotuloTime = selectTeam === "" ? "Escolha seu time" : "Você escolheu";
     
     return (
@@ -17,7 +17,7 @@ const SelectTeam = (props) => {
                 onChange={aoAlterado}
             >
                 {/* Renderizando times no seletor com map (retorna nv arr) */}
-                {teams.map(time => (
+                {teamsNames.map(time => (
                     // Tiramos o index, pois o React pode não renderizar e causar alguns bugs, por isso colocam os o proprio item
                     // Obs: mas geralmente colocamos o index, quando recebemos esse index do servidor back-end
                     <MenuItem key={time} value={time}>

@@ -1,9 +1,9 @@
-import { Button } from '@mui/material';
 import Banner from './componentes/Banner';
 import FormAstro from './componentes/FormAstro';
 import "./styles.css"
 import { useState } from 'react';
 import Team from './componentes/Team';
+import StandardTeams from './componentes/StandardTeams';
 
 function App() {
 
@@ -43,51 +43,19 @@ function App() {
 
   return (
     <div className="App">
-      {/* Componente React */}
       <Banner />
-      {/* Quem Somos */}
-      {/* Conheça os times */}
-      {/* Crie e monte seus times 
-        Aqui terá a exibição dos times, com um botão de "escolher esse time" que leva um default value pro select de escolher times
-      */}
-      {/* Não está funcionando por enquanto | Criar um componente apenas para isso */}
-      <Button
-        color='secondary'
-        size='large'
-        variant="outlined"
-        onClick={() => setSelectTeam("Astro Studies")} >
-        Desvende os segredos dos Cosmos
-      </Button>
-      <Button
-        color='secondary'
-        size='large'
-        variant="outlined"
-        onClick={() => setSelectTeam("Stellar Explorers")} >
-        Seja um explorador estelar
-      </Button>
-      <Button
-        color='secondary'
-        size='large'
-        variant="outlined"
-        onClick={() => setSelectTeam("Galaxy Infrastructure")} >
-        Molde galáxias e construa dysons
-      </Button>
-      <Button
-        color='secondary'
-        size='large'
-        variant="outlined"
-        onClick={() => setSelectTeam("Interspatial Support")} >
-        Seja um semeador dos cosmos
-      </Button>
+      {/* Conhecendo os times, possa ser que o usuário selecione um, antes de criar os astros */}
+      < StandardTeams selectTeam={(time) => setSelectTeam(time)} />
+
       {/* Crie seus Astros */}
       <FormAstro
-        teams={exibicaoDosTimes.map(team => team.name)}
+        teamsNames={exibicaoDosTimes.map(team => team.name)}
         selectTeam={selectTeam}
         aoAlterado={e => setSelectTeam(e.target.value)}
         aoNovoAstroAdicionado={astro => adicionarAstro(astro)}
       />
       {/* Tem que ter key em uma lista, o REACT usa essa key */}
-      {exibicaoDosTimes.map(team => <Team primaryColor={team.primaryColor} backgroundColor={team.backgroundColor} key={team.name} name={team.name} />)} 
+      {exibicaoDosTimes.map(team => <Team primaryColor={team.primaryColor} backgroundColor={team.backgroundColor} key={team.name} name={team.name} />)}
     </div>
   );
 }
