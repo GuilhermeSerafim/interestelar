@@ -3,10 +3,10 @@ import "./Team.css";
 // Primeiramente vou fazer conforme as instruções, depois vejo alguma forma de refatorar para componentes do Material UI
 // Criando "dumb" component
 const Team = (props) => {
-    const {nome} = props;
+    const {name} = props;
     return (
         <section className="time">
-            <h3 align="center">{nome}</h3>
+            <h3 align="center">{name}</h3>
         </section>
     )
 }

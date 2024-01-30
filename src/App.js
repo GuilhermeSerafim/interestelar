@@ -9,29 +9,29 @@ function App() {
 
   const exibicaoDosTimes = [
     {
-      nome: 'Astro Studies',
+      name: 'Astro Studies',
       corPrimaria: '#0a3871',
       corSecundaria: '#abc7e9'
     },
     {
-      nome: 'Stellar Explorers',
+      name: 'Stellar Explorers',
       corPrimaria: '#ffba05',
       corSecundaria: '#fff5d9'
     },
     {
-      nome: 'Interspatial Support',
+      name: 'Interspatial Support',
       corPrimaria: '#b13091',
       corSecundaria: '#b462a0'
     },
     {
-      nome: 'Galaxy Infrastructure',
+      name: 'Galaxy Infrastructure',
       corPrimaria: '#57c278',
       corSecundaria: '#d9f7e9'
     },
   ]
 
 
-  // Subimos esse estado, por que teremos a opção de escolher time (quando estivermos na sessão dos times)
+  // Subimos esse estado, por que teremos a opção de escolher time pelos botões (quando estivermos na sessão dos times)
   const [time, setTime] = useState("");
 
   const [astros, setAstros] = useState([]);
@@ -85,8 +85,7 @@ function App() {
         aoAlterado={e => setTime(e.target.value)}
         aoNovoAstroAdicionado={astro => adicionarAstro(astro)}
       />
-      <Team nome="Nome estático"/>
-      <Team nome="Nome estático 2"/>
+      {exibicaoDosTimes.map(time => <Team name={time.name}/>)}
     </div>
   );
 }
