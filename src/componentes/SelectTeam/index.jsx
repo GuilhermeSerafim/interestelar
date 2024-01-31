@@ -3,11 +3,11 @@ import "./SelectTeam.css";
 
 const SelectTeam = (props) => {
     // Desestruturação do objeto
-    const { teamsNames, aoAlterado, selectTeam } = props;
+    const { teamsNames, aoAlterado, selectTeam, required } = props;
     let rotuloTime = selectTeam === "" ? "Escolha seu time" : "Você escolheu";
     
     return (
-        <FormControl color="secondary" fullWidth margin="dense" variant="filled" >
+        <FormControl required={required} color="secondary" fullWidth margin="dense" variant="filled" >
             <InputLabel id="rotulo-times">{rotuloTime}</InputLabel>
             <Select
                 labelId="rotulo-times"

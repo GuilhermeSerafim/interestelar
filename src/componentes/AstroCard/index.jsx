@@ -1,4 +1,3 @@
-import { Avatar, Card, CardContent } from '@mui/material';
 import './AstroCard.css';
 
 const Astro = (props) => {

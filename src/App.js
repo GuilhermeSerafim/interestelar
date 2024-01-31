@@ -52,12 +52,13 @@ function App() {
         teamsNames={timesEstaticosIniciais.map(team => team.name)}
         selectTeam={selectTeam}
         aoAlterado={e => setSelectTeam(e.target.value)}
+        setSelectTeam={() => setSelectTeam()}
         aoNovoAstroAdicionado={astro => adicionarAstro(astro)}
       />
       {/* Tem que ter key em uma lista, o REACT usa essa key */}
       {/* Renderização de times */}
       {timesEstaticosIniciais
-        // .filter(team => astros.some(astro => astro.team === team.name)) // Outra forma de filtrar os times (para exibir somente os times que contem astro)
+        // .filter(team => astros.some(astro => astro.team === team.name)) // Outra forma de exibir apenas os times que tem astros disponiveis
         .map(team => // Transformando CADA TIME em um componente '<Team/>'
           <Team
             primaryColor={team.primaryColor}
