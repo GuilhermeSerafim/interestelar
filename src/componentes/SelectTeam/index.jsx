@@ -1,14 +1,12 @@
-import { Select, MenuItem, InputLabel, FormControl } from "@mui/material";
+import { Select, MenuItem, InputLabel, FormControl, Menu } from "@mui/material";
 import "./SelectTeam.css";
 
 const SelectTeam = (props) => {
     // Desestruturação do objeto
-    const { teamsNames, aoAlterado, selectTeam, required } = props;
-    let rotuloTime = selectTeam === "" ? "Escolha seu time" : "Você escolheu";
-    
+    const { teamsNames, aoAlterado, selectTeam, required } = props;    
     return (
         <FormControl required={required} color="secondary" fullWidth margin="dense" variant="filled" >
-            <InputLabel id="rotulo-times">{rotuloTime}</InputLabel>
+            <InputLabel id="rotulo-times">{"Escolha um time"}</InputLabel>
             <Select
                 labelId="rotulo-times"
                 id="select-times"
@@ -17,6 +15,7 @@ const SelectTeam = (props) => {
                 onChange={aoAlterado}
             >
                 {/* Renderizando times no seletor com map (retorna nv arr) */}
+                <MenuItem value=""></MenuItem>
                 {teamsNames.map(time => (
                     // Tiramos o index, pois o React pode não renderizar e causar alguns bugs, por isso colocam os o proprio item
                     // Obs: mas geralmente colocamos o index, quando recebemos esse index do servidor back-end

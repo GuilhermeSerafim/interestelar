@@ -4,6 +4,7 @@ import "./styles.css"
 import { useState } from 'react';
 import Team from './componentes/Team';
 import StandardTeams from './componentes/StandardTeams';
+import Rodape from './componentes/Rodape';
 
 function App() {
 
@@ -37,7 +38,6 @@ function App() {
   const [astros, setAstros] = useState([]);
 
   const adicionarAstro = (astro) => {
-    console.log([...astros, astro]);
     setAstros([...astros, astro])
   }
 
@@ -67,6 +67,7 @@ function App() {
             name={team.name}
             astrosFiltrados={astros.filter(astro => astro.team === team.name)} // O array 'astros' é filtrado para incluir os astros em seus respectivos times
           />)}
+          <Rodape/>
     </div>
   );
 }

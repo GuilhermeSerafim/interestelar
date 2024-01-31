@@ -2,11 +2,6 @@
     width: 280px;
 }
 
-.astro .cabecalho {
-    background-color:  #F0F0F0;
-    border-radius: 10px 10px 0px 0px;
-}
-
 .astro img {
     width: 100px;
     border-radius: 50%;
@@ -23,7 +18,6 @@
 }
 
 .astro .rodape h4 {
-    color: var(--primary-color);
     font-size: 18px;
     line-height: 22px;
     font-weight: bold;
@@ -33,6 +27,5 @@
 .astro .rodape h5 {
     font-size: 18px;
     line-height: 22px;
-    color: #212121;
     padding: 0 16px;
 }

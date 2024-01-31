@@ -6,7 +6,6 @@ import MUITextField from '@mui/material/TextField';
     const {error, required, label, multiline, lines, value, aoAlterado} = props;
     
     const aoDigitado = (e) => {
-        console.log("Campo: " + label + " | Digitando... " + value);
         aoAlterado(e.target.value);
     }
     // Subi o hook para o formAstro
