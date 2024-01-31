@@ -7,7 +7,7 @@ import StandardTeams from './componentes/StandardTeams';
 
 function App() {
 
-  const exibicaoDosTimes = [
+  const timesEstaticosIniciais = [
     {
       name: 'Astro Studies',
       primaryColor: '#0a3871',
@@ -49,20 +49,23 @@ function App() {
 
       {/* Crie seus Astros */}
       <FormAstro
-        teamsNames={exibicaoDosTimes.map(team => team.name)}
+        teamsNames={timesEstaticosIniciais.map(team => team.name)}
         selectTeam={selectTeam}
         aoAlterado={e => setSelectTeam(e.target.value)}
         aoNovoAstroAdicionado={astro => adicionarAstro(astro)}
       />
       {/* Tem que ter key em uma lista, o REACT usa essa key */}
-      {exibicaoDosTimes.map(team =>
-        <Team
-          primaryColor={team.primaryColor}
-          backgroundColor={team.backgroundColor}
-          key={team.name}
-          name={team.name}
-          astros={astros.filter(astro => astro.team === team.name)} // Filtro de Astros
-        />)}
+      {/* Renderização de times */}
+      {timesEstaticosIniciais
+        // .filter(team => astros.some(astro => astro.team === team.name)) // Outra forma de filtrar os times (para exibir somente os times que contem astro)
+        .map(team => // Transformando CADA TIME em um componente '<Team/>'
+          <Team
+            primaryColor={team.primaryColor}
+            backgroundColor={team.backgroundColor}
+            key={team.name}
+            name={team.name}
+            astrosFiltrados={astros.filter(astro => astro.team === team.name)} // O array 'astros' é filtrado para incluir os astros em seus respectivos times
+          />)}
     </div>
   );
 }
