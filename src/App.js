@@ -21,7 +21,7 @@ function App() {
     {
       name: 'Interspatial Support',
       primaryColor: '#b13091',
-      backgroundColor: '#b462a0'
+      backgroundColor: '#c082b1'
     },
     {
       name: 'Galaxy Infrastructure',
@@ -45,7 +45,7 @@ function App() {
     <div className="App">
       <Banner />
       {/* Conhecendo os times, possa ser que o usuário selecione um, antes de criar os astros */}
-      < StandardTeams selectTeam={(time) => setSelectTeam(time)} />
+      < StandardTeams setSelectTeam={(time) => setSelectTeam(time)} />
 
       {/* Crie seus Astros */}
       <FormAstro
@@ -61,7 +61,7 @@ function App() {
           backgroundColor={team.backgroundColor}
           key={team.name}
           name={team.name}
-          astros={astros.filter(astro => astro.team === team.name)}
+          astros={astros.filter(astro => astro.team === team.name)} // Filtro de Astros
         />)}
     </div>
   );
