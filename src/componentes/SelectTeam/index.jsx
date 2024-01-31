@@ -6,7 +6,7 @@ const SelectTeam = (props) => {
     const { teamsNames, aoAlterado, selectTeam, required } = props;    
     return (
         <FormControl required={required} color="secondary" fullWidth margin="dense" variant="filled" >
-            <InputLabel id="rotulo-times">{"Escolha um time"}</InputLabel>
+            <InputLabel id="rotulo-times">{"Time"}</InputLabel>
             <Select
                 labelId="rotulo-times"
                 id="select-times"
