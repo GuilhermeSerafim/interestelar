@@ -23,12 +23,7 @@ function App() {
       name: 'Interspatial Support',
       primaryColor: '#b13091',
       backgroundColor: '#c082b1'
-    },
-    {
-      name: 'Galaxy Infrastructure',
-      primaryColor: '#57c278',
-      backgroundColor: '#d9f7e9'
-    },
+    }
   ]
 
 

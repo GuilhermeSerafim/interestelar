@@ -16,3 +16,9 @@
 .footer ul li:last-child {
     margin-right: 0;
 }
+
+.footer__autor {
+    color: #FFF;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+}

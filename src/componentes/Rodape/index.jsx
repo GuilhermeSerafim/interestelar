@@ -27,7 +27,7 @@ const Rodape = () => {
             </section>
             <section>
                 <p>
-                    Desenvolvido por Guilherme.
+                    Desenvolvido por <a className='footer__autor' href="https://guilhermeserafim.github.io/portifolio/" target='blank'>Guilherme</a>
                 </p>
             </section>
         </footer>
