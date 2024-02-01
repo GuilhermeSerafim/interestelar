@@ -6,17 +6,17 @@ const Rodape = () => {
             <section>
                 <ul>
                     <li>
-                        <a href="#" target="_blank">
-                            <img src="./imagens/fb.png" alt="Facebook" />
+                        <a href="https://www.youtube.com/channel/UCDwZfT1FeLccSRAgWubJHng" target="blank">
+                            <img src="./imagens/Youtube.png" alt="Youtube" />
                         </a>
                     </li>
                     <li>
-                        <a href="#" target="_blank">
-                            <img src="./imagens/tw.png" alt="Twitter" />
+                        <a href="wa.link/8dnjl7" target="blank">
+                            <img src="./imagens/Whatsapp.png" alt="Whatsapp" />
                         </a>
                     </li>
                     <li>
-                        <a href="#" target="_blank">
+                        <a href="https://www.instagram.com/iamguiler/" target="blank">
                             <img src="./imagens/ig.png" alt="Instagram" />
                         </a>
                     </li>
@@ -34,4 +34,4 @@ const Rodape = () => {
     )
 }
 
-export default Rodape
+export default Rodape;
