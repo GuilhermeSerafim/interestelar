@@ -1,9 +1,8 @@
-import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import ButtonBase from '@mui/material/ButtonBase';
 import Typography from '@mui/material/Typography';
-import { Card } from '@mui/material';
+
 
 const images = [
     {
@@ -90,10 +89,17 @@ const ImageMarked = styled('span')(({ theme }) => ({
     transition: theme.transitions.create('opacity'),
 }));
 
-export default function StandarTeams(props) {
-    const {setSelectTeam} = props;
+function StandarTeams(props) {
+    const { setSelectTeam } = props;
 
-    return ( 
+    return (
+        <>
+            <Typography
+                variant='h2'
+                style={{ fontWeight: "400", margin: "20px 0 20px 10px" }}
+            >
+                Conheça os times
+            </Typography>
             <Box sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 300, width: '100%' }}>
                 {images.map((image) => (
                     <ImageButton
@@ -102,6 +108,7 @@ export default function StandarTeams(props) {
                         key={image.title}
                         style={{
                             width: image.width,
+                            boxShadow: "8px 8px 16px rgba(0, 0, 0, 0.20)",
                         }}
                     >
                         <ImageSrc style={{ backgroundImage: `url(${image.url})` }} />
@@ -125,60 +132,8 @@ export default function StandarTeams(props) {
                     </ImageButton>
                 ))}
             </Box>
+        </>
     );
 }
 
-// import { Button } from '@mui/material';
-// import './StandardTeams.css';
-
-// const StandardTeams = (props) => {
-//     // Destructuring
-//     const { setSelectTeam } = props;
-
-//     return (
-//         <section className='times'>
-//                 <div className='time__estudos'>
-//                     <Button
-//                         color='secondary'
-//                         size='large'
-//                         variant="outlined"
-//                         onClick={() => setSelectTeam("Astro Studies")} >
-//                         Desvende os segredos dos Cosmos
-//                     </Button>
-
-//                 </div>
-//                 <div className='time__exploracao'>
-//                     <Button
-//                         color='secondary'
-//                         size='large'
-//                         variant="outlined"
-//                         onClick={() => setSelectTeam("Stellar Explorers")} >
-//                         Seja um explorador estelar
-//                     </Button>
-
-//                 </div>
-//                 <div className='time__infraestrutura'>
-//                     <Button
-//                         color='secondary'
-//                         size='large'
-//                         variant="outlined"
-//                         onClick={() => setSelectTeam("Galaxy Infrastructure")} >
-//                         Molde galáxias e construa dysons
-//                     </Button>
-
-//                 </div>
-//                 <div className='time__suporte'>
-//                     <Button
-//                         color='secondary'
-//                         size='large'
-//                         variant="outlined"
-//                         onClick={() => setSelectTeam("Interspatial Support")} >
-//                         Seja um semeador dos cosmos
-//                     </Button>
-
-//                 </div>
-//         </section>
-//     )
-// }
-
-// export default StandardTeams;
+export default StandarTeams;
