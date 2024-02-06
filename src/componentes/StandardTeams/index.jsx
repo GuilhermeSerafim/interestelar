@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import ButtonBase from '@mui/material/ButtonBase';
@@ -10,18 +11,27 @@ const images = [
         title: 'Astro Studies',
         width: '34%',
         escolherTime: "Astro Studies",
+        text: "Exploram os mistérios do cosmos com telescópios quânticos e sondas intergalácticas, buscando desvendar enigmas como a matéria escura e os buracos negros.",
+        color: "#0a3871",
+        backgroundColor: "rgba(10, 56, 113, 0.5)"
     },
     {
         url: './imagens/astros2.png',
         title: 'Stellar Explorers',
         width: '33%',
         escolherTime: "Stellar Explorers",
+        text: "Navegam pelo espaço em busca de novos mundos e civilizações, desafiando os limites da física com naves movidas a energia estelar e propulsão hiperdimensional.",
+        color: "#ffba05",
+        backgroundColor: "rgba(255, 186, 5, 0.5)"
     },
     {
         url: './imagens/astros3.png',
         title: 'Interspatial Support',
         width: '33%',
         escolherTime: "Interspatial Support",
+        text: "Guardiões do universo, constroem megaestruturas intergalácticas como a Esfera de Dyson, colhendo energia estelar e dando suporte a seres em exoplanetas, para equilibrar o cosmos.",
+        color: "#b13091",
+        backgroundColor: "rgba(177, 48, 145, 0.5)"
     },
 ];
 
@@ -91,20 +101,28 @@ const ImageMarked = styled('span')(({ theme }) => ({
 
 function StandarTeams(props) {
     const { setSelectTeam } = props;
+    const [expandedText, setExpandedText] = useState(null);
+
+    const handleButtonClick = (text) => {
+        setExpandedText(text);
+    };
 
     return (
         <>
             <Typography
-                variant='h2'
-                style={{ fontWeight: "400", margin: "20px 0 20px 10px" }}
+                variant='h3'
+                style={{ backgroundColor: "#71009a", color: "#fff", fontWeight: "400", padding: "20px" }}
             >
-                Conheça os times
+                Conheça os times iniciais
             </Typography>
             <Box sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 300, width: '100%' }}>
                 {images.map((image) => (
                     <ImageButton
                         focusRipple
-                        onClick={() => setSelectTeam(image.escolherTime)}
+                        onClick={() => {
+                            setSelectTeam(image.escolherTime);
+                            handleButtonClick(image.text);
+                        }}
                         key={image.title}
                         style={{
                             width: image.width,
@@ -123,12 +141,35 @@ function StandarTeams(props) {
                                     p: 4,
                                     pt: 2,
                                     pb: (theme) => `calc(${theme.spacing(1)} + 6px)`,
+                                    fontWeight: 500,
                                 }}
                             >
                                 {image.title}
                                 <ImageMarked className="MuiImageMarked-root" />
                             </Typography>
                         </Image>
+                        {expandedText === image.text && (
+                            <Typography
+                                className='subtitulo'
+                                color="#FFF"
+                                variant="subtitle1"
+                                sx={{
+                                    position: 'absolute',
+                                    minWidth: image.width,
+                                    maxWidth: 300,
+                                    bottom: -170,
+                                    p: 4,
+                                    pt: 2,
+                                    transition: 'transform 0.5s ease-in-out',
+                                    backgroundColor: image.backgroundColor,
+                                    padding: '4px 8px',
+                                    borderRadius: 4,
+                                }}
+                            >
+                                {image.text}
+                            </Typography>
+
+                        )}
                     </ImageButton>
                 ))}
             </Box>
