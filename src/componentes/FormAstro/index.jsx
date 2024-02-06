@@ -6,7 +6,7 @@ import { useState } from "react";
 
 const FormAstro = (props) => {
     // Destructuring
-    const { selectTeam, aoAlterado, aoNovoAstroAdicionado, teamsNames, setSelectTeam } = props;
+    const { selectTeam, aoAlterado, aoNovoAstroAdicionado, teamsNames, setSelectTeam, bgSelectTeam } = props;
 
     const [nome, setNome] = useState("");
     const [planeta, setPlaneta] = useState("");
@@ -60,6 +60,7 @@ const FormAstro = (props) => {
                 <SelectTeam
                     selectTeam={selectTeam}
                     aoAlterado={aoAlterado} // Prop Drilling
+                    bgSelectTeam={bgSelectTeam} // Prop Drilling
                     teamsNames={teamsNames}
                     required
                 />

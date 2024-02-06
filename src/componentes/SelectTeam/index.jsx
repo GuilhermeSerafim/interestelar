@@ -1,9 +1,9 @@
-import { Select, MenuItem, InputLabel, FormControl, Menu } from "@mui/material";
+import { Select, MenuItem, InputLabel, FormControl} from "@mui/material";
 import "./SelectTeam.css";
 
 const SelectTeam = (props) => {
     // Desestruturação do objeto
-    const { teamsNames, aoAlterado, selectTeam, required } = props;    
+    const { teamsNames, aoAlterado, selectTeam, required, bgSelectTeam } = props;    
     return (
         <FormControl required={required} color="secondary" fullWidth margin="dense" variant="filled" >
             <InputLabel id="rotulo-times">{"Time"}</InputLabel>
@@ -11,6 +11,7 @@ const SelectTeam = (props) => {
                 labelId="rotulo-times"
                 id="select-times"
                 value={selectTeam}
+                style={{backgroundColor:bgSelectTeam, borderRadius: '5px'}}
                 label="Seletor de times"
                 onChange={aoAlterado}
             >

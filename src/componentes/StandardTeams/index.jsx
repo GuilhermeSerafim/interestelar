@@ -100,7 +100,7 @@ const ImageMarked = styled('span')(({ theme }) => ({
 }));
 
 function StandarTeams(props) {
-    const { setSelectTeam } = props;
+    const { setSelectTeam, setBgSelectTeam } = props;
     const [expandedText, setExpandedText] = useState(null);
 
     const handleButtonClick = (text) => {
@@ -121,6 +121,7 @@ function StandarTeams(props) {
                         focusRipple
                         onClick={() => {
                             setSelectTeam(image.escolherTime);
+                            setBgSelectTeam(image.backgroundColor);
                             handleButtonClick(image.text);
                         }}
                         key={image.title}

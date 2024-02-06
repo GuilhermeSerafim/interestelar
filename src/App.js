@@ -30,6 +30,8 @@ function App() {
   // Subimos esse estado, por que teremos a opção de escolher time pelos botões (quando estivermos na sessão dos times)
   const [selectTeam, setSelectTeam] = useState("");
 
+  const [bgSelectTeam, setBgSelectTeam] = useState("");
+
   const [astros, setAstros] = useState([]);
 
   const adicionarAstro = (astro) => {
@@ -40,12 +42,16 @@ function App() {
     <div className="App">
       <Banner />
       {/* Conhecendo os times, possa ser que o usuário selecione um, antes de criar os astros */}
-      < StandardTeams setSelectTeam={(time) => setSelectTeam(time)} />
+      < StandardTeams
+        setBgSelectTeam={(bg) => setBgSelectTeam(bg)}
+        setSelectTeam={(time) => setSelectTeam(time)}
+      />
 
       {/* Crie seus Astros */}
       <FormAstro
         teamsNames={timesEstaticosIniciais.map(team => team.name)}
         selectTeam={selectTeam}
+        bgSelectTeam={bgSelectTeam}
         aoAlterado={e => setSelectTeam(e.target.value)}
         setSelectTeam={() => setSelectTeam()}
         aoNovoAstroAdicionado={astro => adicionarAstro(astro)}
@@ -62,7 +68,7 @@ function App() {
             name={team.name}
             astrosFiltrados={astros.filter(astro => astro.team === team.name)} // O array 'astros' é filtrado para incluir os astros em seus respectivos times
           />)}
-          <Rodape/>
+      <Rodape />
     </div>
   );
 }
