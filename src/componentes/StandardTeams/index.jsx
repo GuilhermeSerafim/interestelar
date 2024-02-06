@@ -1,9 +1,17 @@
 import React, { useState } from 'react';
 import { styled } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import ButtonBase from '@mui/material/ButtonBase';
-import Typography from '@mui/material/Typography';
+import { Box, ButtonBase, Typography } from '@mui/material/'; // Estudar mais afundo esses componentes
+import './StandardTeams.css'
 
+const subtitulo = document.querySelector('.subtitulo');
+const form = document.querySelector(".formCriarAstros");
+
+// subtitulo.addEventListener('click', () => {
+//     window.scrollBy({
+//         top: window.innerHeight,
+//         behavior: 'smooth',
+//     });
+// });
 
 const images = [
     {
@@ -35,6 +43,7 @@ const images = [
     },
 ];
 
+// Criando componente personalizado com styled
 const ImageButton = styled(ButtonBase)(({ theme }) => ({
     position: 'relative',
     height: 200,
@@ -99,21 +108,20 @@ const ImageMarked = styled('span')(({ theme }) => ({
     transition: theme.transitions.create('opacity'),
 }));
 
-function StandarTeams(props) {
+function StandardTeams(props) {
+    // Inserir estados no select do formulário
     const { setSelectTeam, setBgSelectTeam } = props;
-    const [expandedText, setExpandedText] = useState(null);
-
-    const handleButtonClick = (text) => {
-        setExpandedText(text);
-    };
+    // Controlação dos textos expandidos
+    const [textoExpandido, setTextoExpandido] = useState(null);
 
     return (
         <>
             <Typography
+            fontFamily={'sans-serif'}
                 variant='h3'
-                style={{ backgroundColor: "#71009a", color: "#fff", fontWeight: "400", padding: "20px" }}
+                style={{ backgroundColor: "#71009a", color: "#fff", fontWeight: "400", padding: "40px 0 40px 100px" }}
             >
-                Conheça os times iniciais
+                Conheça os times
             </Typography>
             <Box sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 300, width: '100%' }}>
                 {images.map((image) => (
@@ -122,7 +130,7 @@ function StandarTeams(props) {
                         onClick={() => {
                             setSelectTeam(image.escolherTime);
                             setBgSelectTeam(image.backgroundColor);
-                            handleButtonClick(image.text);
+                            setTextoExpandido(image.text);
                         }}
                         key={image.title}
                         style={{
@@ -143,13 +151,14 @@ function StandarTeams(props) {
                                     pt: 2,
                                     pb: (theme) => `calc(${theme.spacing(1)} + 6px)`,
                                     fontWeight: 500,
+                                    fontSize: "1.5em"
                                 }}
                             >
                                 {image.title}
                                 <ImageMarked className="MuiImageMarked-root" />
                             </Typography>
                         </Image>
-                        {expandedText === image.text && (
+                        {textoExpandido === image.text && (
                             <Typography
                                 className='subtitulo'
                                 color="#FFF"
@@ -157,11 +166,11 @@ function StandarTeams(props) {
                                 sx={{
                                     position: 'absolute',
                                     minWidth: image.width,
+                                    fontWeight: 500,
                                     maxWidth: 300,
                                     bottom: -170,
                                     p: 4,
                                     pt: 2,
-                                    transition: 'transform 0.5s ease-in-out',
                                     backgroundColor: image.backgroundColor,
                                     padding: '4px 8px',
                                     borderRadius: 4,
@@ -178,4 +187,4 @@ function StandarTeams(props) {
     );
 }
 
-export default StandarTeams;
+export default StandardTeams;

@@ -3,7 +3,7 @@ import "./SelectTeam.css";
 
 const SelectTeam = (props) => {
     // Desestruturação do objeto
-    const { teamsNames, aoAlterado, selectTeam, required, bgSelectTeam } = props;    
+    const { teamsNames, aoAlterado, selectTeam, required, bgSelectTeam } = props;
     return (
         <FormControl required={required} color="secondary" fullWidth margin="dense" variant="filled" >
             <InputLabel id="rotulo-times">{"Time"}</InputLabel>
