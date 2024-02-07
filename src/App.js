@@ -1,6 +1,5 @@
 import Banner from './componentes/Banner';
 import FormAstro from './componentes/FormAstro';
-import "./styles.css"
 import { useState } from 'react';
 import Team from './componentes/Team';
 import StandardTeams from './componentes/StandardTeams';

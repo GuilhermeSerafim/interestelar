@@ -12,3 +12,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+:root {
+  --primary-color: #71009a;
+  --background-color: #f2f2f2;
+  /* Cores principais dos times */
+  --astro-studies: #0a3871;
+  --stellar-explorers: #ffba05;
+  --interspatial-support: #b13091;
+  --galaxy-infrastructure: #57c278;
+  /* Cores secundárias dos times */
+  --astro-studies-secondary: #abc7e9;
+  --stellar-explorers-secondary: #fff5d9;
+  --interspatial-support-secondary: #c082b1;
+  --galaxy-infrastructure-secondary: #d9f7e9;
+}
