@@ -21,7 +21,7 @@ const images = [
         escolherTime: "Stellar Explorers",
         text: "Navegam pelo espaço em busca de novos mundos e civilizações, desafiando os limites da física com naves movidas a energia estelar e propulsão hiperdimensional.",
         color: "#ffba05",
-        backgroundColor: "rgba(255, 186, 5, 0.5)"
+        backgroundColor: "#e5a704 "
     },
     {
         url: './imagens/astros3.png',
@@ -107,9 +107,9 @@ function StandardTeams(props) {
     return (
         <>
             <Typography
-            fontFamily={'sans-serif'}
+            fontFamily={'inherit'}
                 variant='h3'
-                style={{ backgroundColor: "#71009a", color: "#fff", fontWeight: "400", padding: "40px 0 40px 100px" }}
+                style={{ backgroundColor: "#71009a", color: "#fff", fontWeight: "300", padding: "20px" }}
             >
                 Conheça os times
             </Typography>
@@ -156,7 +156,7 @@ function StandardTeams(props) {
                                 sx={{
                                     position: 'absolute',
                                     minWidth: image.width,
-                                    fontWeight: 500,
+                                    fontWeight: 400,
                                     maxWidth: 300,
                                     bottom: -170,
                                     p: 4,

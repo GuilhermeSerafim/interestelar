@@ -51,6 +51,7 @@ const FormAstro = (props) => {
                     value={imagem}
                     aoAlterado={e => setImagem(e)}
                     label="Endereço da sua imagem"
+                    required
                 />
                 <TextField
                     value={habilidades}
@@ -58,6 +59,7 @@ const FormAstro = (props) => {
                     label="Habilidades"
                     multiline
                     lines="4"
+                    required
                 />
                 <SelectTeam
                     selectTeam={selectTeam}
