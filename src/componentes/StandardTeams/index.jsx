@@ -10,7 +10,7 @@ const images = [
         title: 'Astro Studies',
         width: '34%',
         escolherTime: "Astro Studies",
-        text: "Exploram os mistérios do cosmos com telescópios quânticos e sondas intergalácticas, buscando desvendar enigmas como a matéria escura e os buracos negros.",
+        text: "Exploram os mistérios do cosmos com telescópios quânticos e sondas intergalácticas, buscando desvendar enigmas como a matéria escura, branca e as estrela de hawking.",
         color: "#0a3871",
         backgroundColor: "rgba(10, 56, 113, 0.5)"
     },
