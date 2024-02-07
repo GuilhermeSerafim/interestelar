@@ -34,6 +34,8 @@ function App() {
 
   const [astros, setAstros] = useState([]);
 
+  const [textoExpandido, setTextoExpandido] = useState(null);
+
   const adicionarAstro = (astro) => {
     setAstros([...astros, astro])
   }
@@ -43,6 +45,8 @@ function App() {
       <Banner />
       {/* Conhecendo os times, possa ser que o usuário selecione um, antes de criar os astros */}
       < StandardTeams
+        textoExpandido={textoExpandido}
+        setTextoExpandido={(texto) => setTextoExpandido(texto)}
         setBgSelectTeam={(bg) => setBgSelectTeam(bg)}
         setSelectTeam={(time) => setSelectTeam(time)}
       />
@@ -55,6 +59,7 @@ function App() {
         setBgSelectTeam={() => setBgSelectTeam()}
         selectTeam={selectTeam}
         setSelectTeam={() => setSelectTeam()}
+        setTextoExpandido={() => setTextoExpandido()}
         aoNovoAstroAdicionado={astro => adicionarAstro(astro)}
       />
       {/* Tem que ter key em uma lista, o REACT usa essa key */}

@@ -6,7 +6,7 @@ import { useState } from "react";
 
 const FormAstro = (props) => {
     // Destructuring
-    const { selectTeam, aoAlterado, aoNovoAstroAdicionado, teamsNames, setSelectTeam, bgSelectTeam, setBgSelectTeam } = props;
+    const { selectTeam, aoAlterado, aoNovoAstroAdicionado, teamsNames, setSelectTeam, bgSelectTeam, setBgSelectTeam, setTextoExpandido } = props;
 
     const [nome, setNome] = useState("");
     const [planeta, setPlaneta] = useState("");
@@ -28,6 +28,7 @@ const FormAstro = (props) => {
         setHabilidades("");
         setSelectTeam("")
         setBgSelectTeam("");
+        setTextoExpandido(null);
     }
 
     return (

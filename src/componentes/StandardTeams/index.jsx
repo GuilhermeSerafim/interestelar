@@ -3,15 +3,6 @@ import { styled } from '@mui/material/styles';
 import { Box, ButtonBase, Typography } from '@mui/material/'; // Estudar mais afundo esses componentes
 import './StandardTeams.css'
 
-const subtitulo = document.querySelector('.subtitulo');
-const form = document.querySelector(".formCriarAstros");
-
-// subtitulo.addEventListener('click', () => {
-//     window.scrollBy({
-//         top: window.innerHeight,
-//         behavior: 'smooth',
-//     });
-// });
 
 const images = [
     {
@@ -110,9 +101,8 @@ const ImageMarked = styled('span')(({ theme }) => ({
 // Preciso deixar responsivo
 function StandardTeams(props) {
     // Inserir estados no select do formulário
-    const { setSelectTeam, setBgSelectTeam } = props;
+    const { setSelectTeam, setBgSelectTeam, textoExpandido, setTextoExpandido } = props;
     // Controlação dos textos expandidos
-    const [textoExpandido, setTextoExpandido] = useState(null);
 
     return (
         <>
