@@ -61,7 +61,7 @@ function App() {
       {/* Renderização de times */}
       {timesEstaticosIniciais
         // .filter(team => astros.some(astro => astro.team === team.name)) // Outra forma de exibir apenas os times que tem astros disponiveis
-        .map(team => // Transformando CADA TIME em um componente '<Team/>'
+        .map(team => // Transformando CADA TIME em um componente '<Team/>' e pegando as cores estaticas
           <Team
             primaryColor={team.primaryColor}
             backgroundColor={team.backgroundColor}
