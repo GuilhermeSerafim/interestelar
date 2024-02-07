@@ -14,14 +14,14 @@ function AstroCard(props) {
     const [expandido, setExpandido] = useState(false);
 
     return (
-        <Card sx={{ maxWidth: 400 }}>
+        <Card style={{boxShadow: "8px 8px 16px rgba(0, 0, 0, 0.20)", margin:"20px 30px"}} sx={{ maxWidth: 400, textAlign:"center" }}>
             <CardMedia
-                sx={{ height: 200, width: 200 }}
+                sx={{ height: 280, width: 280 }}
                 image={imagem}
-                title={nome}
+                title={nome} 
             />
             <CardContent>
-                <Typography style={{ color: primaryColor, fontWeight: '450' }} gutterBottom variant="h5" component="div">
+                <Typography style={{ color: primaryColor, fontWeight: '450'}} gutterBottom variant="h5" component="div">
                     {nome}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
@@ -40,8 +40,8 @@ function AstroCard(props) {
                 </Button>
             </CardActions>
             <Collapse in={expandido} timeout="auto" unmountOnExit> {/*timeout - duração animação |  unmountOnExit desmonta comp do dom*/}
-                <CardContent>
-                    <Typography paragraph>
+                <CardContent >
+                    <Typography maxWidth={240} sx={{wordWrap: "break-word"}} paragraph>
                         {habilidades}
                     </Typography>
                 </CardContent>
