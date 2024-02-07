@@ -49,10 +49,11 @@ function App() {
 
       {/* Crie seus Astros */}
       <FormAstro
-        teamsNames={timesEstaticosIniciais.map(team => team.name)}
-        selectTeam={selectTeam}
-        bgSelectTeam={bgSelectTeam}
         aoAlterado={e => setSelectTeam(e.target.value)}
+        teamsNames={timesEstaticosIniciais.map(team => team.name)}
+        bgSelectTeam={bgSelectTeam}
+        setBgSelectTeam={() => setBgSelectTeam()}
+        selectTeam={selectTeam}
         setSelectTeam={() => setSelectTeam()}
         aoNovoAstroAdicionado={astro => adicionarAstro(astro)}
       />

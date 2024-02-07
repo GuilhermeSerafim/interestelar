@@ -107,7 +107,7 @@ const ImageMarked = styled('span')(({ theme }) => ({
     left: 'calc(50% - 9px)',
     transition: theme.transitions.create('opacity'),
 }));
-
+// Preciso deixar responsivo
 function StandardTeams(props) {
     // Inserir estados no select do formulário
     const { setSelectTeam, setBgSelectTeam } = props;
