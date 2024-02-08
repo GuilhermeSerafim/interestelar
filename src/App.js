@@ -36,6 +36,12 @@ function App() {
     setAstros([...astros, astro])
   }
 
+  const limparEstadosSeletor = () => {
+    setSelectTeam("");
+    setBgSelectTeam("");
+    setTextoExpandido(null);
+  }
+
   return (
     <div className="App">
       <BannerDumb />
@@ -46,12 +52,11 @@ function App() {
         setSelectTeam={(time) => setSelectTeam(time)}
       />
       <FormAstro
+        limparEstadosSeletor={() => limparEstadosSeletor()}
         aoAlterado={e => setSelectTeam(e.target.value)}
         teamsNames={timesEstaticosIniciais.map(team => team.name)}
         bgSelectTeam={bgSelectTeam}
-        setBgSelectTeam={() => setBgSelectTeam()}
         selectTeam={selectTeam}
-        setSelectTeam={() => setSelectTeam()}
         setTextoExpandido={() => setTextoExpandido()}
         aoNovoAstroAdicionado={astro => adicionarAstro(astro)}
       />

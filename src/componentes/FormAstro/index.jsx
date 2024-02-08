@@ -9,10 +9,8 @@ const FormAstro = ({
     aoAlterado,
     aoNovoAstroAdicionado,
     teamsNames,
-    setSelectTeam,
     bgSelectTeam,
-    setBgSelectTeam,
-    setTextoExpandido }) => {
+    limparEstadosSeletor }) => {
 
     const [nome, setNome] = useState("");
     const [planeta, setPlaneta] = useState("");
@@ -32,9 +30,7 @@ const FormAstro = ({
         setPlaneta("");
         setImagem("");
         setHabilidades("");
-        setSelectTeam("")
-        setBgSelectTeam("");
-        setTextoExpandido(null);
+        limparEstadosSeletor();
     }
 
     return (
