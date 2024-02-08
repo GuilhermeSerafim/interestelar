@@ -1,9 +1,9 @@
-import Banner from './componentes/Banner';
+import BannerDumb from './componentes/Banner';
 import FormAstro from './componentes/FormAstro';
 import { useState } from 'react';
 import Team from './componentes/Team';
 import StandardTeams from './componentes/StandardTeams';
-import Rodape from './componentes/Rodape';
+import RodapeDumb from './componentes/Rodape';
 
 function App() {
 
@@ -26,13 +26,10 @@ function App() {
   ]
 
 
-  // Subimos esse estado, por que teremos a opção de escolher time pelos botões (quando estivermos na sessão dos times)
-  const [selectTeam, setSelectTeam] = useState("");
-
-  const [bgSelectTeam, setBgSelectTeam] = useState("");
-
+  // Precisei subir alguns estados para manipular em outras partes da aplicação
   const [astros, setAstros] = useState([]);
-
+  const [bgSelectTeam, setBgSelectTeam] = useState("");
+  const [selectTeam, setSelectTeam] = useState("");
   const [textoExpandido, setTextoExpandido] = useState(null);
 
   const adicionarAstro = (astro) => {
@@ -41,16 +38,13 @@ function App() {
 
   return (
     <div className="App">
-      <Banner />
-      {/* Conhecendo os times, possa ser que o usuário selecione um, antes de criar os astros */}
+      <BannerDumb />
       < StandardTeams
         textoExpandido={textoExpandido}
         setTextoExpandido={(texto) => setTextoExpandido(texto)}
         setBgSelectTeam={(bg) => setBgSelectTeam(bg)}
         setSelectTeam={(time) => setSelectTeam(time)}
       />
-
-      {/* Crie seus Astros */}
       <FormAstro
         aoAlterado={e => setSelectTeam(e.target.value)}
         teamsNames={timesEstaticosIniciais.map(team => team.name)}
@@ -61,7 +55,6 @@ function App() {
         setTextoExpandido={() => setTextoExpandido()}
         aoNovoAstroAdicionado={astro => adicionarAstro(astro)}
       />
-      {/* Tem que ter key em uma lista, o REACT usa essa key */}
       {/* Renderização de times */}
       {timesEstaticosIniciais
         // .filter(team => astros.some(astro => astro.team === team.name)) // Outra forma de exibir apenas os times que tem astros disponiveis
@@ -73,7 +66,7 @@ function App() {
             name={team.name}
             astrosFiltrados={astros.filter(astro => astro.team === team.name)} // O array 'astros' é filtrado para incluir os astros em seus respectivos times
           />)}
-      <Rodape />
+      <RodapeDumb />
     </div>
   );
 }

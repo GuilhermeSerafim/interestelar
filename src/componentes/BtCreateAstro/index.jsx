@@ -1,8 +1,7 @@
 import { Button, FormControl } from "@mui/material";
 import "./BtCreateAstro.css"
 
-const BtCreateAstro = (props) => {
-    const { children } = props;
+const BtCreateAstro = ({children}) => {
 
     return (
         <FormControl margin="normal">

@@ -1,14 +1,11 @@
 import './TextField.css';
 import MUITextField from '@mui/material/TextField';
-    const TextField = (props) => {
-
-    // Desestruturação do objeto
-    const {error, required, label, multiline, lines, value, aoAlterado} = props;
+    const TextField = ({error, required, label, multiline, lines, value, aoAlterado}) => {
     
     const aoDigitado = (e) => {
         aoAlterado(e.target.value);
     }
-    // Subi o hook para o formAstro
+
     return (
         <div className="campo-texto">
             <MUITextField

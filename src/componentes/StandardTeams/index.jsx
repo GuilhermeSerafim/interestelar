@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { styled } from '@mui/material/styles';
 import { Box, ButtonBase, Typography } from '@mui/material/'; // Estudar mais afundo esses componentes
 import './StandardTeams.css'
@@ -34,7 +33,7 @@ const images = [
     },
 ];
 
-// Criando componente personalizado com styled
+// Criando componentes personalizado com styled
 const ImageButton = styled(ButtonBase)(({ theme }) => ({
     position: 'relative',
     height: 200,
@@ -98,16 +97,14 @@ const ImageMarked = styled('span')(({ theme }) => ({
     left: 'calc(50% - 9px)',
     transition: theme.transitions.create('opacity'),
 }));
-// Preciso deixar responsivo
-function StandardTeams(props) {
-    // Inserir estados no select do formulário
-    const { setSelectTeam, setBgSelectTeam, textoExpandido, setTextoExpandido } = props;
-    // Controlação dos textos expandidos
+
+
+function StandardTeams({ setSelectTeam, setBgSelectTeam, textoExpandido, setTextoExpandido }) {
 
     return (
         <>
             <Typography
-            fontFamily={'inherit'}
+                fontFamily={'inherit'}
                 variant='h3'
                 style={{ backgroundColor: "#71009a", color: "#fff", fontWeight: "300", padding: "20px" }}
             >

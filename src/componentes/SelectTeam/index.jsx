@@ -1,9 +1,8 @@
 import { Select, MenuItem, InputLabel, FormControl} from "@mui/material";
 import "./SelectTeam.css";
 
-const SelectTeam = (props) => {
-    // Desestruturação do objeto
-    const { teamsNames, aoAlterado, selectTeam, required, bgSelectTeam } = props;
+const SelectTeam = ({teamsNames, aoAlterado, selectTeam, required, bgSelectTeam}) => {
+
     return (
         <FormControl required={required} color="secondary" fullWidth margin="dense" variant="filled" >
             <InputLabel id="rotulo-times">{"Time"}</InputLabel>

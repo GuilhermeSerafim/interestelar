@@ -4,9 +4,15 @@ import "./Form.css";
 import BtCreateAstro from "../BtCreateAstro";
 import { useState } from "react";
 
-const FormAstro = (props) => {
-    // Destructuring
-    const { selectTeam, aoAlterado, aoNovoAstroAdicionado, teamsNames, setSelectTeam, bgSelectTeam, setBgSelectTeam, setTextoExpandido } = props;
+const FormAstro = ({
+    selectTeam,
+    aoAlterado,
+    aoNovoAstroAdicionado,
+    teamsNames,
+    setSelectTeam,
+    bgSelectTeam,
+    setBgSelectTeam,
+    setTextoExpandido }) => {
 
     const [nome, setNome] = useState("");
     const [planeta, setPlaneta] = useState("");

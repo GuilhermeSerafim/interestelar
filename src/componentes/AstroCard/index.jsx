@@ -8,9 +8,8 @@ import Typography from '@mui/material/Typography';
 import { useState } from 'react';
 import { Collapse } from '@mui/material';
 
-function AstroCard(props) {
+function AstroCard({imagem, nome, planeta, primaryColor, habilidades}) {
 
-    const { imagem, nome, planeta, primaryColor, habilidades } = props;
     const [expandido, setExpandido] = useState(false);
 
     return (
