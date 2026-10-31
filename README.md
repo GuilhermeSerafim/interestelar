@@ -4,12 +4,12 @@ Bem-vindo ao Interestelar, a plataforma cósmica para a formação de equipes as
 
 ## Visão Geral 🌌
 
-Interestelar é uma aplicação que permite aos usuários montarem equipes astronômicas e explorarem os mistérios do universo. Use sua criativade!
+Interestelar é um estudo de interface React para montar equipes temáticas de astros, inspirado no projeto Organo da Alura.
 
 ## Funcionalidades Principais 🛰️
 
 - **Cosmic Team Builder:** Monte sua equipe escolhendo astros, estrelas e constelações para formar grupos únicos.
-- **Galactic Objectives:** Defina e participe de missões cósmicas para explorar novas fronteiras estelares.
+- **Organização por equipe:** os cartões são filtrados nos três times definidos em `src/App.js`.
 - **Stellar Profiles:** Cada astro possui um perfil detalhado com nome, cargo cósmico e imagem.
 
 ## Designer 🎨
@@ -23,9 +23,10 @@ Para criar a experiência visual única do Interestelar, utilizamos:
 
 ## Como Começar 🌠
 
-1. Clone este repositório: `git clone https://github.com/seu-username/interestelar.git`
-2. Instale as dependências: `npm install`
-3. Inicie o aplicativo: `npm start`
+1. Clone este repositório: `git clone https://github.com/GuilhermeSerafim/interestelar.git`
+2. Entre no diretório do projeto: `cd interestelar`
+3. Instale as dependências: `npm install`
+4. Inicie o aplicativo: `npm start`
 
 ## Contribuição 👩‍🚀
 
@@ -33,8 +34,14 @@ Estamos abertos a contribuições! Se você quiser melhorar o Interestelar, sint
 
 ## Contato 🌟
 
-Para perguntas ou feedback, entre em contato conosco em [contato@interestelar.com](mailto:guilerstudies@gmail.com).
+Para perguntas ou feedback, entre em contato conosco em [guilerstudies@gmail.com](mailto:guilerstudies@gmail.com).
 
 Vamos explorar juntos o vasto cosmos! 🌌✨
 
 ![](https://demo.wp-modula.com/wp-content/uploads/2020/09/giphy.gif)
+
+## Escopo do estudo
+
+`src/App.js` mantém os astros em estado React (`useState`) e os distribui entre três equipes iniciais. Esse fluxo mantém os cartões em memória, sem persistência entre sessões. Sistema de missões e colaboração online não fazem parte do fluxo descrito. O tema astronômico é uma proposta visual de estudo.
+
+O projeto usa React 18, Material UI e react-scripts 5. Além de `npm start`, há scripts `npm run build` e `npm test`.
