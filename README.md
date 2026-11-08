@@ -30,7 +30,7 @@ Para criar a experiência visual única do Interestelar, utilizamos:
 
 ## Contribuição 👩‍🚀
 
-Estamos abertos a contribuições! Se você quiser melhorar o Interestelar, sinta-se à vontade para enviar pull requests.
+Este repositório está arquivado como registro de estudo. O código permanece público para consulta e experimentação em uma cópia própria.
 
 ## Contato 🌟
 
